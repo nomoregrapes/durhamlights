@@ -1,10 +1,23 @@
 	
+	var query;
+	var itemData;
+
+	/* map vars */
 	var map;
 	var lyrStuff;
+	var lyrLocation; var mrkLocation; var mrkLocationCircle;
+	var markDest; var lineSatnav; var locLine = false;
 
-	function showLocations(ajaxresponse) {
-		ajaxresponse = $.parseJSON(ajaxresponse.responseText);
-		lyrStuff.addData(ajaxresponse);
+	function locationsLoaded(ajaxresponse) {
+		itemData = $.parseJSON(ajaxresponse.responseText);
+		showLocations();
+		if(query.goto != undefined) {
+			loadSatNav();
+		}
+	}
+
+	function showLocations() {
+		lyrStuff.addData(itemData);
 		lyrStuff.eachLayer(function(layer) {
 			styleUpLayer(layer);
 		});
@@ -26,7 +39,7 @@
 				url: 'lumiere-durham.geojson',
 				dataType: 'json',
 				data: data,
-				complete: showLocations
+				complete: locationsLoaded
 		});
 
 	}
@@ -79,6 +92,53 @@
 	}
 
 
+	//when the data is loaded & we want to go somewhere
+	function loadSatNav() {
+		//do we want a line to a location?
+		locLine = true;
+		//get lat lon
+		var destItem = findItem(query.goto);
+		locLat = destItem.geometry.coordinates[1];
+		locLon = destItem.geometry.coordinates[0];
+		//go there
+		markDest = L.marker([locLat, locLon]).addTo(map);
+		updateNavLine();
+	}
+
+	//update a line between you and the destination
+	function updateNavLine(pointStart) {
+		if(locLine == true) {
+			pointEnd = L.latLng(locLat, locLon);
+			if(pointStart != null && pointEnd != null) {
+				var linePoints = [pointStart, pointEnd];
+				var polyline_options = {
+					color: '#000'
+				};
+				if(lineSatnav == undefined) {
+					lineSatnav = L.polyline(linePoints, polyline_options);
+					lineSatnav.addTo(map);
+				} else {
+					lineSatnav.setLatLngs(linePoints);
+				}
+			}
+		}
+	}
+
+	//find an item in the data. This could move to functions.js and be shared with the art page
+	function findItem(longid) {
+		if(itemData == 'undefined') {
+			return false;
+		}
+		var result;
+		$.each(itemData.features, function(index, item) {
+			if(item.properties["long-id"] == longid) {
+				result = item;
+			}
+		});
+		return result;
+	}
+
+
 	function getQueryParams(qs) {
 	    qs = qs.split('+').join(' ');
 
@@ -101,7 +161,7 @@ $( document ).ready(function() {
 
 
 			//geolocate
-			var query = getQueryParams(document.location.search);
+			query = getQueryParams(document.location.search);
 			if(query.locate != 'no') {
 				map.locate({setView: true, maxZoom: 19});
 			}
@@ -134,5 +194,29 @@ $( document ).ready(function() {
 
 			//load data
 			getStuffLocations();
+
+
+			//when we know where yu are
+			function onLocationFound(e) {
+				var radius = e.accuracy / 2;
+				if(mrkLocation == undefined) {
+					mrkLocation = L.marker(e.latlng, {"opacity": 0}).addTo(map);
+					mrkLocationCircle = L.circle(e.latlng, radius).addTo(map);
+				}
+				else {
+					mrkLocation.setLatLng(e.latlng);
+					mrkLocationCircle.setLatLng(e.latlng);
+					mrkLocationCircle.setRadius(radius);
+				}
+				updateNavLine(e.latlng);
+			}
+			map.on('locationfound', onLocationFound);
+
+			//every 3secs(3000ms), find where you are
+			setInterval(function(){ 
+				map.locate({setView: false, maxZoom: 17});
+			}, 3000);
+			map.locate({setView: false, maxZoom: 17});
+
 
 });
