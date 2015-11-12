@@ -9,7 +9,7 @@ The website has some aims it wants to stick to
 
 # History & Credits
 Durham Lights was created by (Gregory Marler)[http://twitter.com/gregorymarler] and further help was provided by...
-* anyone who add their name here
+* (Nathan Edwards)[https://github.com/npfedwards]
 
 # To Do
 - [ ] Nearby artwork links (almost done)

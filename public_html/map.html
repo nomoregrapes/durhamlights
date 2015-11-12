@@ -1,13 +1,65 @@
 <html>
 <head>
 
-	<link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.min.css" />
-	<link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap-theme.min.css" />
+	<!--<link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.min.css" />-->
+	<!--<link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap-theme.min.css" />-->
 	<link rel="stylesheet" type="text/css" href="lib/jquery-ui-lightness/jquery-ui-1.10.4.min.css" />
 	<link rel="stylesheet" type="text/css" href="lib/mapbox-v2.2.3/mapbox.css" />
-	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<style>
+
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .container-fluid{
+            min-height:100%;
+        }
+        .map-half {
+            height: 90%;
+        }
+        #map {
+            width: 100%;
+            height: 100%;
+            background: #636363;
+        }
 
 
+        .art-half {
+            height: 30%;
+        }
+        .art-half img {
+            max-height: 100%;
+        }
+
+
+        .bottom-half {
+            width: 100%;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .art-holder {
+            display: none;
+            position: absolute;
+            margin: 10px;
+            background: white;
+            padding: 20px;
+            top: 0;
+            left: 0;
+        }
+
+        .art-image {
+            margin: 0 auto;
+            display: block;
+        }
+
+        .art-close {
+            float: right;
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
 
@@ -16,6 +68,14 @@
 	<div class="map-half">
 		<div id="map"></div>
 	</div>
+
+    <div class="art-holder">
+        <a href="#" onclick="closeArt()" class="art-close">Close</a>
+        <img src="" class="art-image">
+        <h2></h2>
+        <div class="details"></div>
+        <div class="nearby"></div>
+    </div>
 
 	<div class="bottom-half">
 		<p>
@@ -26,9 +86,195 @@
 
 
 	<script type="text/javascript" src="lib/jquery-1.11.2.min.js"></script>
-	<script type="text/javascript" src="lib/bootstrap/bootstrap.min.js"></script>
+	<!--<script type="text/javascript" src="lib/bootstrap/bootstrap.min.js"></script>-->
 	<script type="text/javascript" src="lib/mapbox-v2.2.3/mapbox.js"></script>
-	<script type="text/javascript" src="map.js"></script>
+	<script type="text/javascript">
 
+        var query = {};
+        var thisArt;
+        var json = '{"type":"FeatureCollection","properties":{"description":"Items on the Lumiere website, colelcted by @gregorymarler","updated":"20151111","source":"http://www.lumiere-festival.com/durham-2015/programme/"},"features":[{"type":"Feature","properties":{"long-id":1472,"data-latitude":54.7792195,"data-longitude":-1.57846219999999,"img-url":"http://www.lumiere-festival.com/content/uploads/2015/08/CLOUD-Singapore5_web-450x450.jpg","img-title":"CLOUD","img-alt":"CLOUD","festival-id":1,"title":"CLOUD                       ","subtitle":"By Caitlind r.c. Brown & Wayne Garrett (Canada)","excert":"Commissioned by Garage Museum of Contemporary Art for Art Experiment 2013 (Moscow). Simple, bright and playful, CLOUD is an interactive sculpture built from 6,000 incandescent light bulbs.  &nbsp; &nbsp;","url":"http://www.lumiere-festival.com/programme/durham/cloud/"},"geometry":{"type":"Point","coordinates":[-1.57846219999999,54.7792195]}},{"type":"Feature","properties":{"long-id":1527,"data-latitude":54.779785812940254,"data-longitude":-1.5767480200988757,"img-url":"http://www.lumiere-festival.com/content/uploads/2015/09/MON_Echelman_Photo-Ulysse_Lemerise_OSA_1_e_web-450x450.jpg","img-title":"1.26 Durham","img-alt":"1.26 Durham","festival-id":2,"title":"1.26 Durham                     ","subtitle":"By Janet Echelman / Studio Echelman (USA)","excert":"Strong but soft, huge but delicate, this interactive sculpture asks us to consider the interconnectedness of our world.","url":"http://www.lumiere-festival.com/programme/durham/1-26-durham/"},"geometry":{"type":"Point","coordinates":[-1.5767480200988757,54.779785812940254]}},{"type":"Feature","properties":{"long-id":1516,"data-latitude":54.777942,"data-longitude":-1.5752800000000207,"img-url":"http://www.lumiere-festival.com/content/uploads/2015/09/Stock-Main-22-450x450.jpg","img-title":"Big Knitting","img-alt":"Big Knitting","festival-id":3,"title":"Big Knitting                        ","subtitle":"By Victoria MacLeod (UK)","excert":"Hanging from a wall, BRILLIANT winner Victoria McLeod&#8217;s jumbo knitting needles and &#8216;wool&#8217; will glow above a Durham street.  &nbsp;","url":"http://www.lumiere-festival.com/programme/durham/big-knitting-2/"},"geometry":{"type":"Point","coordinates":[-1.5752800000000207,54.777942]}},{"type":"Feature","properties":{"long-id":1463,"data-latitude":54.7785916,"data-longitude":-1.5776706999999988,"img-url":"http://www.lumiere-festival.com/content/uploads/2015/09/LightBench_Berlin_04_web-450x450.jpg","img-title":"Lightbench","img-alt":"Lightbench","festival-id":4,"title":"Lightbench                      ","subtitle":"By Bernd Spiecker for LBO LichtBankObjekte (Germany)","excert":"A park bench with a difference: take a seat on this piece of illuminated street furniture. &nbsp;","url":"http://www.lumiere-festival.com/programme/durham/lightbench/"},"geometry":{"type":"Point","coordinates":[-1.5776706999999988,54.7785916]}},{"type":"Feature","properties":{"long-id":1539,"data-latitude":54.77525,"data-longitude":-1.5848519999999553,"img-url":"http://www.lumiere-festival.com/content/uploads/2015/09/Precious-Header-450x450.jpg","img-title":"Precious","img-alt":"Precious","festival-id":5,"title":"Precious                        ","subtitle":"By Storybox (New Zealand) & Durham Sixth Form Centre students (UK)","excert":"Throughout our lives we collect objects that hold a special meaning. This projection explores the stories that lie behind some of our most &#8216;precious&#8217; items. &nbsp;","url":"http://www.lumiere-festival.com/programme/durham/precious/"},"geometry":{"type":"Point","coordinates":[-1.5848519999999553,54.77525]}},{"type":"Feature","properties":{"long-id":1473,"data-latitude":54.777987,"data-longitude":-1.5763990000000376,"img-url":"http://www.lumiere-festival.com/content/uploads/2015/08/Change-your-stripes_web-450x450.jpeg","title":"Change Your Stripes                     ","img-alt":"Change Your Stripes","festival-id":6,"subtitle":"By Cleary Connolly (Ireland/France)","excert":"Dance with your own shadow as this giant abstract painting comes to life as you move.","url":"http://www.lumiere-festival.com/programme/durham/change-your-stripes/"},"geometry":{"type":"Point","coordinates":[-1.5763990000000376,54.777987]}},{"type":"Feature","properties":{"long-id":1530,"data-latitude":54.778675,"data-longitude":-1.5751330000000507,"img-url":"http://www.lumiere-festival.com/content/uploads/2015/09/DotFeat.jpg","img-title":"DOT","img-alt":"DOT","festival-id":7,"title":"DOT                     ","subtitle":"By Philippe Morvan (France)","excert":"Baptiste Molliard (Music) Julien Gremel (Light) Get up close to this enormous bank of light bulbs as they pulse, flash and beam across the city centre.","url":"http://www.lumiere-festival.com/programme/durham/dot/"},"geometry":{"type":"Point","coordinates":[-1.5751330000000507,54.778675]}},{"type":"Feature","properties":{"long-id":1942,"data-latitude":54.77798900000001,"data-longitude":-1.5745993000000453,"img-url":"http://www.lumiere-festival.com/content/uploads/2015/10/Helvet_Featured_2.jpg","img-title":"Helvetictoc","img-alt":"Helvetictoc","festival-id":8,"title":"Helvetictoc                     ","subtitle":"By Tobie Langel (Switzerland)","excert":"A Lumiere favourite that is now a permanent piece in the city, this witty installation turns clock-watching on its head.","url":"http://www.lumiere-festival.com/programme/durham/helvetictoc/"},"geometry":{"type":"Point","coordinates":[-1.5745993000000453,54.77798900000001]}},{"type":"Feature","properties":{"long-id":1538,"data-latitude":54.77677726386409,"data-longitude":-1.573717049598713,"img-url":"http://www.lumiere-festival.com/content/uploads/2015/09/supercube-flyer-EN-1_web2-450x450.jpg","img-title":"Supercube","img-alt":"Supercube","festival-id":9,"title":"Supercube                       ","subtitle":"By Stéphane Masson (France)","excert":"Interactive computing assistant: Alain Chaix Peer inside one of 448 Kilner jars and you’re in for a surprise.","url":"http://www.lumiere-festival.com/programme/durham/supercube/"},"geometry":{"type":"Point","coordinates":[-1.573717049598713,54.77677726386409]}},{"type":"Feature","properties":{"long-id":1532,"data-latitude":54.7769036,"data-longitude":-1.5751597999999376,"img-url":"http://www.lumiere-festival.com/content/uploads/2015/09/Lum-Header-450x450.jpg","img-title":"Les Luminéoles®","img-alt":"Les Luminéoles®","festival-id":10,"title":"Les Luminéoles®                     ","subtitle":"By Porté par le vent® (France)","excert":"Originally commissioned for Lyon Festival of Lights. With chinese style flowers lighting the way on Saddler and Silver Street, discover dream-like creatures as they ebb and flow against the wind in Market Place. &nbsp; &nbsp;","url":"http://www.lumiere-festival.com/programme/durham/lumineoles/"},"geometry":{"type":"Point","coordinates":[-1.5751597999999376,54.7769036]}},{"type":"Feature","properties":{"long-id":1537,"data-latitude":54.77439140000001,"data-longitude":-1.5745110000000295,"img-url":"http://www.lumiere-festival.com/content/uploads/2015/09/bicycle-mock-up-2_web-450x450.jpg","img-title":"Neon Bikes","img-alt":"Neon Bikes","festival-id":11,"title":"Neon Bikes                      ","subtitle":"By Robyn Wright (UK)","excert":"Celebrating our love of cycling, BRILLIANT winner Robyn Wright’s Neon Bikes are a simple re-imagining of an everyday mode of transport. &nbsp;","url":"http://www.lumiere-festival.com/programme/durham/neon-bikes/"},"geometry":{"type":"Point","coordinates":[-1.5745110000000295,54.77439140000001]}},{"type":"Feature","properties":{"long-id":2012,"data-latitude":54.7732324,"data-longitude":-1.576391400000034,"img-url":"http://www.lumiere-festival.com/content/uploads/2015/10/Litre-Teaser.jpg","img-title":"Litre of Light","img-alt":"Litre of Light","festival-id":12,"title":"Litre of Light                      ","subtitle":"By Mick Stephenson (UK)","excert":"At Lumiere we celebrate light in all its forms, but for many people across the world light is a luxury. Help us build this installation and support two worthy causes in the process. &nbsp; &nbsp;","url":"http://www.lumiere-festival.com/programme/durham/litre-of-light/"},"geometry":{"type":"Point","coordinates":[-1.576391400000034,54.7732324]}},{"type":"Feature","properties":{"long-id":1596,"data-latitude":54.7732324,"data-longitude":-1.576391400000034,"img-url":"http://www.lumiere-festival.com/content/uploads/2015/09/WM-Main-450x450.jpg","img-title":"The World Machine","img-alt":"The World Machine","festival-id":13,"title":"The World Machine                       ","subtitle":"By Ross Ashton, John Del Nero, Isobel Waller-Bridge, Carlos Frenk and Richard Bower. (Mexico)","excert":"The story of the birth of modern cosmology from the 12th century until the present day is told in a stunning new son et lumiere for the façade of Durham Cathedral.  ","url":"http://www.lumiere-festival.com/programme/durham/the-world-machine/"},"geometry":{"type":"Point","coordinates":[-1.576391400000034,54.7732324]}},{"type":"Feature","properties":{"long-id":1529,"data-latitude":54.7732324,"data-longitude":-1.576391400000034,"img-url":"http://www.lumiere-festival.com/content/uploads/2015/09/ComplexMain-450x450.jpg","img-title":"Complex Meshes 2015","img-alt":"Complex Meshes 2015","festival-id":14,"title":"Complex Meshes 2015                     ","subtitle":"By Miguel Chevalier (France)","excert":"Music by Jacopo Baboni SchilingiSoftware: Cyrille Henry and Antoine Villeret.  A monumental interactive projection bringing new light to the ribbed vault ceiling at Durham Cathedral.","url":"http://www.lumiere-festival.com/programme/durham/complex-meshes-2015/"},"geometry":{"type":"Point","coordinates":[-1.576391400000034,54.7732324]}},{"type":"Feature","properties":{"long-id":1517,"data-latitude":54.77021264980933,"data-longitude":-1.5771508785735477,"img-url":"http://www.lumiere-festival.com/content/uploads/2015/09/Featured.jpg","img-title":"The Stars Beneath our Feet","img-alt":"The Stars Beneath our Feet","festival-id":15,"title":"The Stars Beneath our Feet                      ","subtitle":"By Louise Mackenzie (UK)","excert":"Against the backdrop of a temple folly, Louise Mackenzie creates an audio-visual installation that uses light-absorbing micro-algae to play with our sense of perception. &nbsp;","url":"http://www.lumiere-festival.com/programme/durham/the-stars-beneath-our-feet/"},"geometry":{"type":"Point","coordinates":[-1.5771508785735477,54.77021264980933]}},{"type":"Feature","properties":{"long-id":1620,"data-latitude":54.77142310000001,"data-longitude":-1.5766499999999724,"img-url":"http://www.lumiere-festival.com/content/uploads/2015/09/2014-11KEW01_web2-450x450.jpg","img-title":"Garden of Light","img-alt":"Garden of Light","festival-id":16,"title":"Garden of Light                     ","subtitle":"By TILT (France)","excert":"These giant illuminated plants will bring tropical summer to wintry November and light the way during Lumiere.  ","url":"http://www.lumiere-festival.com/programme/durham/garden-of-light/"},"geometry":{"type":"Point","coordinates":[-1.5766499999999724,54.77142310000001]}},{"type":"Feature","properties":{"long-id":1535,"data-latitude":54.7755094474584,"data-longitude":-1.5733973404754806,"img-url":"http://www.lumiere-festival.com/content/uploads/2015/09/Whale-Header-3-450x450.jpg","img-title":"Mysticète","img-alt":"Mysticète","festival-id":17,"title":"Mysticète                       ","subtitle":"By Top’là Design / Catherine Garret (France)","excert":"Animation: Domenico SpanoSoundtrack: Laurent Frick Do whales swim upstream? What does a whale sound like? &nbsp;","url":"http://www.lumiere-festival.com/programme/durham/mysticete/"},"geometry":{"type":"Point","coordinates":[-1.5733973404754806,54.7755094474584]}},{"type":"Feature","properties":{"long-id":1534,"data-latitude":54.77672889999999,"data-longitude":-1.5769043999999894,"img-url":"http://www.lumiere-festival.com/content/uploads/2015/09/wave-visual-2_web2-450x450.jpg","img-title":"Wave","img-alt":"Wave","festival-id":18,"title":"Wave                        ","subtitle":"By Stu Langley (UK)","excert":"Fabrication by Andrew Middleton  A glinting, frozen wave will rise above Fowlers Yard in a celebration of East Durham’s industrial heritage made using sea glass collected from local beaches. &nbsp;","url":"http://www.lumiere-festival.com/programme/durham/wave/"},"geometry":{"type":"Point","coordinates":[-1.5769043999999894,54.77672889999999]}},{"type":"Feature","properties":{"long-id":1518,"data-latitude":54.77172418188661,"data-longitude":-1.5790285042297683,"img-url":"http://www.lumiere-festival.com/content/uploads/2015/09/Stock-Main-22-450x450.jpg","img-title":"Rainbow River","img-alt":"Rainbow River","festival-id":19,"title":"Rainbow River                       ","subtitle":"By Alison Lowery & Richard Hornby (UK)","excert":"Celebrating UNESCO’s International Year of Light in 2015, this BRILLIANT winning idea will use a triangular prism to cast multi-coloured patterns onto the River Wear. &nbsp;","url":"http://www.lumiere-festival.com/programme/durham/rainbow-river/"},"geometry":{"type":"Point","coordinates":[-1.5790285042297683,54.77172418188661]}},{"type":"Feature","properties":{"long-id":1526,"data-latitude":54.77422760514658,"data-longitude":-1.580120027816747,"img-url":"http://www.lumiere-festival.com/content/uploads/2015/09/Fog-Main-450x450.jpg","img-title":"Fogscape #03238","img-alt":"Fogscape #03238","festival-id":20,"title":"Fogscape #03238                     ","subtitle":"By Fujiko Nakaya, Simon Corder (Japan / UK)","excert":"Veteran Japanese artist Fujiko Nakaya was the first artist to use fog as a sculptural medium, using it for the transmission of light and shadow. Simon Corder has been working with light in the environment for thirty years.  He returns to Lumiere to make this work with Fujiko Nakaya. &nbsp;","url":"http://www.lumiere-festival.com/programme/durham/fogscape-03238/"},"geometry":{"type":"Point","coordinates":[-1.580120027816747,54.77422760514658]}},{"type":"Feature","properties":{"long-id":1531,"data-latitude":54.7754719,"data-longitude":-1.576942000000031,"img-url":"http://www.lumiere-festival.com/content/uploads/2015/09/Fools-Main-450x450.jpg","img-title":"Fool’s Paradise","img-alt":"Fool’s Paradise","festival-id":21,"title":"Fool’s Paradise                     ","subtitle":"By Novak (UK)","excert":"Soundtrack by Ed Carter A beautiful projection that will transform Durham Castle to retell tales of local history, folklore and famous fables.","url":"http://www.lumiere-festival.com/programme/durham/fools-paradise/"},"geometry":{"type":"Point","coordinates":[-1.576942000000031,54.7754719]}},{"type":"Feature","properties":{"long-id":1536,"data-latitude":54.77676690892987,"data-longitude":-1.5802014438720562,"img-url":"http://www.lumiere-festival.com/content/uploads/2015/09/Wheels_Main_1-450x450.jpg","img-title":"Wheels of Industry","img-alt":"Wheels of Industry","festival-id":22,"title":"Wheels of Industry                      ","subtitle":"By Stu Langley (UK)","excert":"Illuminate the windows of this stained glass car with your own pedal power. &nbsp;","url":"http://www.lumiere-festival.com/programme/durham/wheels-of-industry/"},"geometry":{"type":"Point","coordinates":[-1.5802014438720562,54.77676690892987]}},{"type":"Feature","properties":{"long-id":1533,"data-latitude":54.77525079999999,"data-longitude":-1.5867948999999726,"img-url":"http://www.lumiere-festival.com/content/uploads/2015/09/HSHA_3_web-450x450.jpg","img-title":"Home Sweet Home Durham","img-alt":"Home Sweet Home Durham","festival-id":23,"title":"Home Sweet Home Durham                      ","subtitle":"By Shared Space & Light","excert":"On a quiet residential street, a red brick terraced house comes alive with true stories from across the county. &nbsp;","url":"http://www.lumiere-festival.com/programme/durham/home-sweet-home-durham/"},"geometry":{"type":"Point","coordinates":[-1.5867948999999726,54.77525079999999]}},{"type":"Feature","properties":{"long-id":1524,"data-latitude":54.785169343238856,"data-longitude":-1.5866280166717388,"img-url":"http://www.lumiere-festival.com/content/uploads/2015/09/Asalto_Main-450x450.jpg","img-title":"Asalto Durham","img-alt":"Asalto Durham","festival-id":24,"title":"Asalto Durham                       ","subtitle":"By Daniel Canogar (Spain)","excert":"A large-scale projection that helps us imagine overcoming the obstacles in our lives. &nbsp;","url":"http://www.lumiere-festival.com/programme/durham/asalto-durham/"},"geometry":{"type":"Point","coordinates":[-1.5866280166717388,54.785169343238856]}},{"type":"Feature","properties":{"long-id":1599,"data-latitude":54.776834,"data-longitude":-1.5787890000000289,"img-url":"http://www.lumiere-festival.com/content/uploads/2015/09/Ruby_Main-450x450.jpg","img-title":"Ruby","img-alt":"Ruby","festival-id":25,"title":"Ruby                        ","subtitle":"By Emma Allen (UK)","excert":"An animated self-portrait exploring the idea of rebirth, the transfer of energy from one incarnation to another.","url":"http://www.lumiere-festival.com/programme/durham/ruby/"},"geometry":{"type":"Point","coordinates":[-1.5787890000000289,54.776834]}},{"type":"Feature","properties":{"long-id":1467,"data-latitude":54.776834,"data-longitude":-1.5787890000000289,"img-url":"http://www.lumiere-festival.com/content/uploads/2015/08/3662-8529-Tim-Smith_web-450x450.jpg","img-title":"Electric Fireside","img-alt":"Electric Fireside","festival-id":26,"title":"Electric Fireside                       ","subtitle":"By The Brick Box (UK)","excert":"We’re all familiar with the idea of storytelling by the fire. The Brick Box brings this ancient activity to Lumiere, inviting community groups from East Durham and Spennymoor to gather round and tell a tale.","url":"http://www.lumiere-festival.com/programme/durham/electric-fireside/"},"geometry":{"type":"Point","coordinates":[-1.5787890000000289,54.776834]}},{"type":"Feature","properties":{"long-id":1607,"data-latitude":54.7749006,"data-longitude":-1.569706999999994,"img-url":"http://www.lumiere-festival.com/content/uploads/2015/09/RHMain-450x450.jpg","img-title":"The Red House","img-alt":"The Red House","festival-id":27,"title":"The Red House                       ","subtitle":"By Patrice Warrener (France)","excert":"Renowned across the world for his chromolithe projections, Warrener will bring his unique expertise to Durham to repaint a well known building with light. &nbsp;","url":"http://www.lumiere-festival.com/programme/durham/the-red-house/"},"geometry":{"type":"Point","coordinates":[-1.569706999999994,54.7749006]}},{"type":"Feature","properties":{"long-id":1525,"data-latitude":54.7748603,"data-longitude":-1.568500800000038,"img-url":"http://www.lumiere-festival.com/content/uploads/2015/09/LHMH-exhibition-SI-2_web2-450x450.jpg","img-title":"DREAMERS","img-alt":"DREAMERS","festival-id":28,"title":"DREAMERS                        ","subtitle":"By Elisa Artesero (UK)","excert":"Inspired by Japanese paper screens and Zen poetry, DREAMERS creates an atmospheric space to explore.","url":"http://www.lumiere-festival.com/programme/durham/dreamers/"},"geometry":{"type":"Point","coordinates":[-1.568500800000038,54.7748603]}},{"type":"Feature","properties":{"long-id":2176,"data-latitude":54.7861565,"data-longitude":-1.5659888000000137,"img-url":"http://www.lumiere-festival.com/content/uploads/2015/10/Little-Boasts.jpg","img-title":"I Haven&#8217;t Changed my Mind in a Thousand Years","img-alt":"I Haven&#8217;t Changed my Mind in a Thousand Years","festival-id":29,"title":"I Haven&#8217;t Changed my Mind in a Thousand Years                     ","subtitle":"By Beth J Ross","excert":"A former BRILLIANT winning installation returns to Lumiere.","url":""},"geometry":{"type":"Point","coordinates":[-1.5659888000000137,54.7861565]}},{"type":"Feature","properties":{"long-id":50,"type":"area","data-latitude":54.777387920309,"data-longitude":-1.574907302856,"title":"Access-controlled area","subtitle":"Tickets required until 7:30pm","excert":"After 7:30pm no tickets required, queues still possible. Access and exit by Framwellgate Bridge, Claypath, or Old Elvet Bridge. Kingsgate Bridge is exit only.","url":""},"geometry":{"type":"Polygon","coordinates":[[[-1.5776324272155762,54.77619982466377],[-1.5781259536743164,54.77622457701229],[-1.5781903266906738,54.77593992408968],[-1.5777182579040525,54.775915171566965],[-1.5794992446899414,54.771768910279604],[-1.5794134140014648,54.77090247365063],[-1.5787267684936523,54.7699493719286],[-1.5778899192810059,54.76977607829432],[-1.5770959854125977,54.769875103319066],[-1.5756797790527344,54.770506382154835],[-1.572740077972412,54.772895250159046],[-1.5727829933166504,54.77310566182538],[-1.5731263160705566,54.77316754740133],[-1.5730619430541992,54.77334082651039],[-1.5726757049560547,54.773303695335215],[-1.5731263160705566,54.77467752612097],[-1.5737485885620117,54.77570477451243],[-1.5736627578735352,54.77595230034538],[-1.5729117393493652,54.775754279800196],[-1.5728473663330076,54.775915171566965],[-1.5735125541687012,54.776175072300084],[-1.5729117393493652,54.77649685184665],[-1.5733408927917478,54.77691763662244],[-1.574864387512207,54.777264161974834],[-1.5746712684631345,54.777647811581005],[-1.5749073028564453,54.77767256304355],[-1.5750575065612793,54.777326041189674],[-1.576237678527832,54.77767256304355],[-1.577160358428955,54.777709690208965],[-1.577460765838623,54.77676912484842],[-1.5776324272155762,54.77619982466377]]]}}]}';
+        var map;
+        var lyrStuff;
+
+        function showLocations() {
+            ajaxresponse = $.parseJSON(json);
+            lyrStuff.addData(ajaxresponse);
+            lyrStuff.eachLayer(function(layer) {
+                styleUpLayer(layer);
+            });
+
+            //as we don't have data, do this...
+            //mixItUp();
+
+            //if marker is clicked
+            lyrStuff.on('click', function(e) {
+                if (e.layer.feature.properties.type !== 'area') {
+                    //markerInfo(e.layer.feature);
+                    query.art = e.layer.feature.properties['long-id'];
+                    onArtRequest();
+                };
+            });
+        }
+        function getStuffLocations() {
+            showLocations()
+        }
+
+        /** caution, this function changes the data and then updates the style **/
+        function mixItUp() {
+            lyrStuff.eachLayer(function(layer) {
+                if(layer.toGeoJSON().properties.cat == null) {
+                    cats = ['green', 'blue', 'red', 'purple', 'yellow', 'cafe', 'venue', 'unknown'];
+                    newcat = cats[Math.floor(Math.random()*cats.length)];
+                    layer.toGeoJSON().properties.cat = newcat;
+                    styleUpLayer(layer);
+                }
+            });
+        }
+
+        //define styles for it
+        function styleUpLayer(layer) {
+            //console.log('styling');
+            /*
+             if (layer.toGeoJSON().properties.category === 'yellow') {
+             //styling for markers
+             layer.setStyle({
+             fillColor: "#4daf4a",
+             fillOpacity: 0.8,
+             stroke: false
+             });
+             }
+             */
+            if (layer.feature.properties.type === 'area') {
+                layer.setStyle({
+                    fillColor: "#fbe171",
+                    fillOpacity: 0.5,
+                    stroke: false, /* y u no work if I set you as a colour? */
+                    strokeColor: "#fbe171",
+                    strokeOpacity: 0.8,
+                    strokeWidth: 10
+                });
+            }
+            else {
+                //for areas?
+                /*
+                 layer.setStyle({
+                 fillColor: "#fbe171",
+                 fillOpacity: 0.8,
+                 stroke: false
+                 });
+                 */
+            }
+        }
+
+
+        function getQueryParams(qs) {
+            qs = qs.split('+').join(' ');
+
+            var params = {},
+                    tokens,
+                    re = /[?&]?([^=]+)=([^&]*)/g;
+
+            while (tokens = re.exec(qs)) {
+                params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
+            }
+
+            return params;
+        }
+
+        function dataLoaded() {
+            var decoded = JSON.parse(json);
+            //get the one we want
+            $.each(decoded.features, function(index, item) {
+                if(item.properties["long-id"] == query.art) {
+                    thisArt = item;
+                }
+            });
+
+            loadArt();
+        }
+
+        function loadArt() {
+            $('.art-image').attr('src', thisArt.properties['img-url']);
+            $('h2').html(thisArt.properties['title']);
+            var string = '';
+            if (typeof thisArt.properties['excert'] !== 'undefined') {
+                string += thisArt.properties['excert'];
+            }
+            if (typeof thisArt.properties['excerpt'] !== 'undefined') {
+                string += thisArt.properties['excerpt'];
+            }
+            $('.details').html(
+                    "<p><strong>"+ thisArt.properties['subtitle'] +"</strong></p>"
+                            +"<p>"+ string +"</p>"
+                            +"<p><a href='"+ thisArt.properties['url'] + "'>official page</a></p>"
+            );
+
+            if(thisArt.properties['nearby'] != undefined) {
+                $('.nearby').html("Nearby: ");
+                $.each(thisArt.properties['nearby'], function(index, item) {
+                    $('.nearby').append('<a href="art.html?art='+ item["long-id"] +'">'+ item.title +'</a>');
+                    if(index < (thisArt.properties['nearby'] - 1)) {
+                        $('.nearby').append(' | ');
+                    }
+                });
+            } else {
+                $('.nearby').html("");
+            }
+            //console.log(thisArt.properties['title']);
+
+            $('.art-holder').css('display','block');
+        }
+
+        function onArtRequest() {
+            dataLoaded();
+        }
+
+        $( document ).ready(function() {
+
+            //map = L.mapbox.map('map').setView([52.92, -1.08], 6); //UK
+            map = L.mapbox.map('map').setView([54.77281, -1.57648], 15); // Durham Cathedral 54.77281/-1.57648
+
+
+            //geolocate
+            var query = getQueryParams(document.location.search);
+            if(query.locate != 'no') {
+                map.locate({setView: true, maxZoom: 19});
+            }
+
+
+            //more base layers
+            /*
+             var OSMLayer = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+             attribution: 'Base map &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+             });
+             map.addLayer(OSMLayer);
+             */
+
+            var Thunderforest_Outdoors = L.tileLayer('http://{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png', {
+                attribution: 'Maps &copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, Data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
+            });
+            map.addLayer(Thunderforest_Outdoors);
+
+            //get ready for data
+            var baseJson = {
+                "type":"FeatureCollection",
+                "features":[
+                ]
+            };
+            lyrStuff = L.geoJson(baseJson, {
+                //onEachFeature: attachClickEvent
+            });
+            map.addLayer(lyrStuff);
+
+
+            //load data
+            getStuffLocations();
+
+        });
+
+        function closeArt() {
+            $('.art-holder').css('display','none');
+        }
+    </script>
 </body>
 </html>
