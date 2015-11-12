@@ -206,7 +206,12 @@
             "title": "Supercube                       ",
             "subtitle": "By Stéphane Masson (France)",
             "excert": "Interactive computing assistant: Alain Chaix Peer inside one of 448 Kilner jars and you’re in for a surprise.",
-            "url": "http://www.lumiere-festival.com/programme/durham/supercube/"
+            "url": "http://www.lumiere-festival.com/programme/durham/supercube/",
+            "nearby": [
+                {"long-id": 1537, "title": "Neon Bikes"},
+                {"long-id": 1535, "title": "Mysticète"},
+                {"long-id": 1532, "title": "Les Luminéoles"}
+            ]
         },
         "geometry": {
             "type": "Point",
@@ -230,7 +235,13 @@
             "title": "Les Luminéoles®                     ",
             "subtitle": "By Porté par le vent® (France)",
             "excert": "Originally commissioned for Lyon Festival of Lights. With chinese style flowers lighting the way on Saddler and Silver Street, discover dream-like creatures as they ebb and flow against the wind in Market Place. &nbsp; &nbsp;",
-            "url": "http://www.lumiere-festival.com/programme/durham/lumineoles/"
+            "url": "http://www.lumiere-festival.com/programme/durham/lumineoles/",
+            "nearby": [
+                {"long-id": 1535, "title": "Mysticète"},
+                {"long-id": 1537, "title": "Neon Bikes"},
+                {"long-id": 1534, "title": "Wave"},
+                {"long-id": 1516, "title": "Big Kniting"}
+            ]
         },
         "geometry": {
             "type": "Point",
@@ -253,7 +264,12 @@
             "title": "Neon Bikes                      ",
             "subtitle": "By Robyn Wright (UK)",
             "excert": "Celebrating our love of cycling, BRILLIANT winner Robyn Wright’s Neon Bikes are a simple re-imagining of an everyday mode of transport. &nbsp;",
-            "url": "http://www.lumiere-festival.com/programme/durham/neon-bikes/"
+            "url": "http://www.lumiere-festival.com/programme/durham/neon-bikes/",
+            "nearby": [
+                {"long-id": 1529, "title": "Complex Meshes 2015"},
+                {"long-id": 1535, "title": "Mysticète"},
+                {"long-id": 1620, "title": "Garden of Light"}
+            ]
         },
         "geometry": {
             "type": "Point",
@@ -325,7 +341,12 @@
             "title": "Complex Meshes 2015                     ",
             "subtitle": "By Miguel Chevalier (France)",
             "excert": "Music by Jacopo Baboni SchilingiSoftware: Cyrille Henry and Antoine Villeret.  A monumental interactive projection bringing new light to the ribbed vault ceiling at Durham Cathedral.",
-            "url": "http://www.lumiere-festival.com/programme/durham/complex-meshes-2015/"
+            "url": "http://www.lumiere-festival.com/programme/durham/complex-meshes-2015/",
+            "nearby": [
+                {"long-id": 1620, "title": "Garden of Light"},
+                {"long-id": 1537, "title": "Neon Bikes"},
+                {"long-id": 1517, "title": "The Stars Beneath our Feet"}   
+            ]
         },
         "geometry": {
             "type": "Point",
@@ -349,7 +370,11 @@
             "title": "The Stars Beneath our Feet                      ",
             "subtitle": "By Louise Mackenzie (UK)",
             "excert": "Against the backdrop of a temple folly, Louise Mackenzie creates an audio-visual installation that uses light-absorbing micro-algae to play with our sense of perception. &nbsp;",
-            "url": "http://www.lumiere-festival.com/programme/durham/the-stars-beneath-our-feet/"
+            "url": "http://www.lumiere-festival.com/programme/durham/the-stars-beneath-our-feet/",
+            "nearby": [
+                {"long-id": 1529, "title": "Complex Meshes 2015"},
+                {"long-id": 1620, "title": "Garden of Light"}
+            ]
         },
         "geometry": {
             "type": "Point",
@@ -373,7 +398,11 @@
             "title": "Garden of Light                     ",
             "subtitle": "By TILT (France)",
             "excert": "These giant illuminated plants will bring tropical summer to wintry November and light the way during Lumiere.  ",
-            "url": "http://www.lumiere-festival.com/programme/durham/garden-of-light/"
+            "url": "http://www.lumiere-festival.com/programme/durham/garden-of-light/",
+            "nearby": [
+                {"long-id": 1529, "title": "Complex Meshes 2015"},
+                {"long-id": 1537, "title": "Neon Bikes"}
+            ]
         },
         "geometry": {
             "type": "Point",
@@ -397,7 +426,12 @@
             "title": "Mysticète                       ",
             "subtitle": "By Top’là Design / Catherine Garret (France)",
             "excert": "Animation: Domenico SpanoSoundtrack: Laurent Frick Do whales swim upstream? What does a whale sound like? &nbsp;",
-            "url": "http://www.lumiere-festival.com/programme/durham/mysticete/"
+            "url": "http://www.lumiere-festival.com/programme/durham/mysticete/",
+            "nearby": [
+                {"long-id": 1537, "title": "Neon Bikes"},
+                {"long-id": 1532, "title": "Les Luminéoles"},
+                {"long-id": 1607, "title": "The Red House"}
+            ]
         },
         "geometry": {
             "type": "Point",
@@ -421,7 +455,11 @@
             "title": "Wave                        ",
             "subtitle": "By Stu Langley (UK)",
             "excert": "Fabrication by Andrew Middleton  A glinting, frozen wave will rise above Fowlers Yard in a celebration of East Durham’s industrial heritage made using sea glass collected from local beaches. &nbsp;",
-            "url": "http://www.lumiere-festival.com/programme/durham/wave/"
+            "url": "http://www.lumiere-festival.com/programme/durham/wave/",
+            "nearby": [
+                {"long-id": 1532, "title": "Les Luminéoles"},
+                {"long-id": 1473, "title": "Change Your Stripes"}
+            ]
         },
         "geometry": {
             "type": "Point",
@@ -492,7 +530,11 @@
             "title": "Fool’s Paradise                     ",
             "subtitle": "By Novak (UK)",
             "excert": "Soundtrack by Ed Carter A beautiful projection that will transform Durham Castle to retell tales of local history, folklore and famous fables.",
-            "url": "http://www.lumiere-festival.com/programme/durham/fools-paradise/"
+            "url": "http://www.lumiere-festival.com/programme/durham/fools-paradise/",
+            "nearby": [
+                {"long-id": 1529, "title": "Complex Meshes 2015"},
+                {"long-id": 1537, "title": "Neon Bikes"}
+            ]
         },
         "geometry": {
             "type": "Point",
@@ -634,7 +676,12 @@
             "title": "The Red House                       ",
             "subtitle": "By Patrice Warrener (France)",
             "excert": "Renowned across the world for his chromolithe projections, Warrener will bring his unique expertise to Durham to repaint a well known building with light. &nbsp;",
-            "url": "http://www.lumiere-festival.com/programme/durham/the-red-house/"
+            "url": "http://www.lumiere-festival.com/programme/durham/the-red-house/",
+            "nearby": [
+                {"long-id": 1525, "title": "Dreamers"},
+                {"long-id": 1535, "title": "Mysticète"},
+                {"long-id": 1538, "title": "Supercube"}
+            ]
         },
         "geometry": {
             "type": "Point",
