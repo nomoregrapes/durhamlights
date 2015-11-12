@@ -13,7 +13,7 @@ Durham Lights was created by (Gregory Marler)[http://twitter.com/gregorymarler] 
 
 # To Do
 - [ ] Nearby artwork links (almost done)
-- [ ] Navigation (half-done)
+- [x] Navigation
 - [ ] any post launch clean up?
 - [ ] Add Park and Ride points
 - [ ] Add acces arrows (in/out points, out of Kingsgate, unknown at Prebends)

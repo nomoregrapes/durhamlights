@@ -32,7 +32,9 @@ function loadArt() {
 	$('.art-half img').attr('src', thisArt.properties['img-url']);
 	$('h2').html(thisArt.properties['title']);
 	$('.details').html(
-		"<p><strong>"+ thisArt.properties['subtitle'] +"</strong></p>"
+		"<p><strong>"+ thisArt.properties['subtitle'] +"</strong>"
+			+" <a href='map.html?goto="+ thisArt.properties['long-id'] +"'>map arrow</a>"
+			+"</p>"
 		+"<p>"+ thisArt.properties['excert'] + thisArt.properties['excerpt'] +"</p>"
 		+"<p><a href='"+ thisArt.properties['url'] + "'>official page</a></p>"
 	);
