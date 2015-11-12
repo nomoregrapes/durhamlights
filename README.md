@@ -10,3 +10,14 @@ The website has some aims it wants to stick to
 # History & Credits
 Durham Lights was created by (Gregory Marler)[http://twitter.com/gregorymarler] and further help was provided by...
 * anyone who add their name here
+
+# To Do
+- [ ] Nearby artwork links (almost done)
+- [ ] Navigation (half-done)
+- [ ] any post launch clean up?
+- [ ] Add Park and Ride points
+- [ ] Add acces arrows (in/out points, out of Kingsgate, unknown at Prebends)
+- [ ] Add visitor hub
+- [ ] Live news feed?
+- [ ] Feed twitter into news feed
+- [ ] Make it an app with Phone gap
