@@ -474,8 +474,8 @@
         "type": "Feature",
         "properties": {
             "long-id": 1518,
-            "data-latitude": 54.77172418188661,
-            "data-longitude": -1.5790285042297683,
+            "data-latitude": 54.77119953,
+            "data-longitude": -1.58003568,
             "img-url": "http://www.lumiere-festival.com/content/uploads/2015/09/Stock-Main-22-450x450.jpg",
             "img-title": "Rainbow River",
             "img-alt": "Rainbow River",
@@ -488,8 +488,8 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -1.5790285042297683,
-                54.77172418188661
+                -1.58003568,
+                54.77119953
             ]
 
         }
@@ -498,8 +498,8 @@
         "type": "Feature",
         "properties": {
             "long-id": 1526,
-            "data-latitude": 54.77422760514658,
-            "data-longitude": -1.580120027816747,
+            "data-latitude": 54.77386065,
+            "data-longitude": -1.57911300,
             "img-url": "http://www.lumiere-festival.com/content/uploads/2015/09/Fog-Main-450x450.jpg",
             "img-title": "Fogscape #03238",
             "img-alt": "Fogscape #03238",
@@ -512,8 +512,8 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -1.580120027816747,
-                54.77422760514658
+                -1.57911300,
+                54.77386065
             ]
         }
     },
