@@ -79,6 +79,21 @@
 	}
 
 
+	function getQueryParams(qs) {
+	    qs = qs.split('+').join(' ');
+
+	    var params = {},
+	        tokens,
+	        re = /[?&]?([^=]+)=([^&]*)/g;
+
+	    while (tokens = re.exec(qs)) {
+	        params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
+	    }
+
+	    return params;
+	}
+
+
 $( document ).ready(function() {
 
 			//map = L.mapbox.map('map').setView([52.92, -1.08], 6); //UK
@@ -86,7 +101,10 @@ $( document ).ready(function() {
 
 
 			//geolocate
-			//map.locate({setView: true, maxZoom: 19});
+			var query = getQueryParams(document.location.search);
+			if(query.locate != 'no') {
+				map.locate({setView: true, maxZoom: 19});
+			}
 
 
 			//more base layers
