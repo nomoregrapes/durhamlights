@@ -325,7 +325,12 @@
             "title": "Complex Meshes 2015                     ",
             "subtitle": "By Miguel Chevalier (France)",
             "excert": "Music by Jacopo Baboni SchilingiSoftware: Cyrille Henry and Antoine Villeret.  A monumental interactive projection bringing new light to the ribbed vault ceiling at Durham Cathedral.",
-            "url": "http://www.lumiere-festival.com/programme/durham/complex-meshes-2015/"
+            "url": "http://www.lumiere-festival.com/programme/durham/complex-meshes-2015/",
+            "nearby": [
+                {"long-id": 1620, "title": "Garden of Light"},
+                {"long-id": 1537, "title": "Neon Bikes"},
+                {"long-id": 1517, "title": "The Stars Beneath our Feet"}   
+            ]
         },
         "geometry": {
             "type": "Point",

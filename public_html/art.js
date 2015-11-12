@@ -41,7 +41,7 @@ function loadArt() {
 		$('.nearby').html("Nearby: ");
 		$.each(thisArt.properties['nearby'], function(index, item) {
 			$('.nearby').append('<a href="art.html?art='+ item["long-id"] +'">'+ item.title +'</a>');
-			if(index < (thisArt.properties['nearby'] - 1)) {
+			if(index < (thisArt.properties['nearby'].length - 1)) {
 				$('.nearby').append(' | ');
 			}
 		});
