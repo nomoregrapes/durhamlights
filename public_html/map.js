@@ -8,6 +8,20 @@
 	var lyrLocation; var mrkLocation; var mrkLocationCircle;
 	var markDest; var lineSatnav; var locLine = false;
 
+	var iconSet = [];
+	iconSet['artwork'] = L.icon({
+		iconUrl: 'images/light.png',
+		iconSize: [30, 30],
+		iconAnchor: [15, 15],
+		popupAnchor: [15, 15]
+	});
+	iconSet['camera'] = L.icon({
+		iconUrl: 'images/camera.png',
+		iconSize: [25, 25],
+		iconAnchor: [12, 12]
+	});
+
+
 	function locationsLoaded(ajaxresponse) {
 		itemData = $.parseJSON(ajaxresponse.responseText);
 		showLocations();
@@ -21,9 +35,6 @@
 		lyrStuff.eachLayer(function(layer) {
 			styleUpLayer(layer);
 		});
-
-		//as we don't have data, do this...
-		//mixItUp();
 
 		//if marker is clicked
 		lyrStuff.on('click', function(e) {
@@ -44,32 +55,16 @@
 
 	}
 
-	/** caution, this function changes the data and then updates the style **/
-	function mixItUp() {
-		lyrStuff.eachLayer(function(layer) {
-			if(layer.toGeoJSON().properties.cat == null) {
-				cats = ['green', 'blue', 'red', 'purple', 'yellow', 'cafe', 'venue', 'unknown'];
-				newcat = cats[Math.floor(Math.random()*cats.length)];
-				layer.toGeoJSON().properties.cat = newcat;
-				styleUpLayer(layer);
-			}
-		});
-	}
-
 	//define styles for it
 	function styleUpLayer(layer) {
 		//console.log('styling');
-		/*
-		if (layer.toGeoJSON().properties.category === 'yellow') {
-			//styling for markers
-			layer.setStyle({
-				fillColor: "#4daf4a",
-				fillOpacity: 0.8,
-				stroke: false
-			});
+		if (layer.feature.properties.type === 'artwork') {
+			layer.setIcon(iconSet['artwork']);
 		}
-		*/
-		if (layer.feature.properties.type === 'area') {
+		else if (layer.feature.properties.type === 'traffic-cam') {
+			layer.setIcon(iconSet['camera']);
+		}
+		else if (layer.feature.properties.type === 'area') {
 			layer.setStyle({
 				fillColor: "#fbe171",
 				fillOpacity: 0.5,

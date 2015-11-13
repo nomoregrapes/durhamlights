@@ -10,6 +10,7 @@
         "type": "Feature",
         "properties": {
             "long-id": 1472,
+            "type": "artwork",
             "data-latitude": 54.7792195,
             "data-longitude": -1.57846219999999,
             "img-url": "http://www.lumiere-festival.com/content/uploads/2015/08/CLOUD-Singapore5_web-450x450.jpg",
@@ -34,6 +35,7 @@
         "type": "Feature",
         "properties": {
             "long-id": 1527,
+            "type": "artwork",
             "data-latitude": 54.779785812940254,
             "data-longitude": -1.5767480200988757,
             "img-url": "http://www.lumiere-festival.com/content/uploads/2015/09/MON_Echelman_Photo-Ulysse_Lemerise_OSA_1_e_web-450x450.jpg",
@@ -57,6 +59,7 @@
         "type": "Feature",
         "properties": {
             "long-id": 1516,
+            "type": "artwork",
             "data-latitude": 54.777942,
             "data-longitude": -1.5752800000000207,
             "img-url": "http://www.lumiere-festival.com/content/uploads/2015/09/Stock-Main-22-450x450.jpg",
@@ -80,6 +83,7 @@
         "type": "Feature",
         "properties": {
             "long-id": 1463,
+            "type": "artwork",
             "data-latitude": 54.7785916,
             "data-longitude": -1.5776706999999988,
             "img-url": "http://www.lumiere-festival.com/content/uploads/2015/09/LightBench_Berlin_04_web-450x450.jpg",
@@ -103,6 +107,7 @@
         "type": "Feature",
         "properties": {
             "long-id": 1539,
+            "type": "artwork",
             "data-latitude": 54.77525,
             "data-longitude": -1.5848519999999553,
             "img-url": "http://www.lumiere-festival.com/content/uploads/2015/09/Precious-Header-450x450.jpg",
@@ -127,6 +132,7 @@
         "type": "Feature",
         "properties": {
             "long-id": 1473,
+            "type": "artwork",
             "data-latitude": 54.777987,
             "data-longitude": -1.5763990000000376,
             "img-url": "http://www.lumiere-festival.com/content/uploads/2015/08/Change-your-stripes_web-450x450.jpeg",
@@ -150,6 +156,7 @@
         "type": "Feature",
         "properties": {
             "long-id": 1530,
+            "type": "artwork",
             "data-latitude": 54.778675,
             "data-longitude": -1.5751330000000507,
             "img-url": "http://www.lumiere-festival.com/content/uploads/2015/09/DotFeat.jpg",
@@ -173,6 +180,7 @@
         "type": "Feature",
         "properties": {
             "long-id": 1942,
+            "type": "artwork",
             "data-latitude": 54.77798900000001,
             "data-longitude": -1.5745993000000453,
             "img-url": "http://www.lumiere-festival.com/content/uploads/2015/10/Helvet_Featured_2.jpg",
@@ -197,6 +205,7 @@
         "type": "Feature",
         "properties": {
             "long-id": 1538,
+            "type": "artwork",
             "data-latitude": 54.77677726386409,
             "data-longitude": -1.573717049598713,
             "img-url": "http://www.lumiere-festival.com/content/uploads/2015/09/supercube-flyer-EN-1_web2-450x450.jpg",
@@ -226,6 +235,7 @@
         "type": "Feature",
         "properties": {
             "long-id": 1532,
+            "type": "artwork",
             "data-latitude": 54.7769036,
             "data-longitude": -1.5751597999999376,
             "img-url": "http://www.lumiere-festival.com/content/uploads/2015/09/Lum-Header-450x450.jpg",
@@ -255,6 +265,7 @@
         "type": "Feature",
         "properties": {
             "long-id": 1537,
+            "type": "artwork",
             "data-latitude": 54.77439140000001,
             "data-longitude": -1.5745110000000295,
             "img-url": "http://www.lumiere-festival.com/content/uploads/2015/09/bicycle-mock-up-2_web-450x450.jpg",
@@ -284,6 +295,7 @@
         "type": "Feature",
         "properties": {
             "long-id": 2012,
+            "type": "artwork",
             "data-latitude": 54.7732324,
             "data-longitude": -1.576391400000034,
             "img-url": "http://www.lumiere-festival.com/content/uploads/2015/10/Litre-Teaser.jpg",
@@ -308,6 +320,7 @@
         "type": "Feature",
         "properties": {
             "long-id": 1596,
+            "type": "artwork",
             "data-latitude": 54.7732324,
             "data-longitude": -1.576391400000034,
             "img-url": "http://www.lumiere-festival.com/content/uploads/2015/09/WM-Main-450x450.jpg",
@@ -332,6 +345,7 @@
         "type": "Feature",
         "properties": {
             "long-id": 1529,
+            "type": "artwork",
             "data-latitude": 54.7732324,
             "data-longitude": -1.576391400000034,
             "img-url": "http://www.lumiere-festival.com/content/uploads/2015/09/ComplexMain-450x450.jpg",
@@ -361,6 +375,7 @@
         "type": "Feature",
         "properties": {
             "long-id": 1517,
+            "type": "artwork",
             "data-latitude": 54.77021264980933,
             "data-longitude": -1.5771508785735477,
             "img-url": "http://www.lumiere-festival.com/content/uploads/2015/09/Featured.jpg",
@@ -389,6 +404,7 @@
         "type": "Feature",
         "properties": {
             "long-id": 1620,
+            "type": "artwork",
             "data-latitude": 54.77142310000001,
             "data-longitude": -1.5766499999999724,
             "img-url": "http://www.lumiere-festival.com/content/uploads/2015/09/2014-11KEW01_web2-450x450.jpg",
@@ -417,6 +433,7 @@
         "type": "Feature",
         "properties": {
             "long-id": 1535,
+            "type": "artwork",
             "data-latitude": 54.7755094474584,
             "data-longitude": -1.5733973404754806,
             "img-url": "http://www.lumiere-festival.com/content/uploads/2015/09/Whale-Header-3-450x450.jpg",
@@ -446,6 +463,7 @@
         "type": "Feature",
         "properties": {
             "long-id": 1534,
+            "type": "artwork",
             "data-latitude": 54.77672889999999,
             "data-longitude": -1.5769043999999894,
             "img-url": "http://www.lumiere-festival.com/content/uploads/2015/09/wave-visual-2_web2-450x450.jpg",
@@ -474,6 +492,7 @@
         "type": "Feature",
         "properties": {
             "long-id": 1518,
+            "type": "artwork",
             "data-latitude": 54.77119953,
             "data-longitude": -1.58003568,
             "img-url": "http://www.lumiere-festival.com/content/uploads/2015/09/Stock-Main-22-450x450.jpg",
@@ -498,6 +517,7 @@
         "type": "Feature",
         "properties": {
             "long-id": 1526,
+            "type": "artwork",
             "data-latitude": 54.77386065,
             "data-longitude": -1.57911300,
             "img-url": "http://www.lumiere-festival.com/content/uploads/2015/09/Fog-Main-450x450.jpg",
@@ -521,6 +541,7 @@
         "type": "Feature",
         "properties": {
             "long-id": 1531,
+            "type": "artwork",
             "data-latitude": 54.7754719,
             "data-longitude": -1.576942000000031,
             "img-url": "http://www.lumiere-festival.com/content/uploads/2015/09/Fools-Main-450x450.jpg",
@@ -549,6 +570,7 @@
         "type": "Feature",
         "properties": {
             "long-id": 1536,
+            "type": "artwork",
             "data-latitude": 54.77676690892987,
             "data-longitude": -1.5802014438720562,
             "img-url": "http://www.lumiere-festival.com/content/uploads/2015/09/Wheels_Main_1-450x450.jpg",
@@ -572,6 +594,7 @@
         "type": "Feature",
         "properties": {
             "long-id": 1533,
+            "type": "artwork",
             "data-latitude": 54.77525079999999,
             "data-longitude": -1.5867948999999726,
             "img-url": "http://www.lumiere-festival.com/content/uploads/2015/09/HSHA_3_web-450x450.jpg",
@@ -596,6 +619,7 @@
         "type": "Feature",
         "properties": {
             "long-id": 1524,
+            "type": "artwork",
             "data-latitude": 54.785169343238856,
             "data-longitude": -1.5866280166717388,
             "img-url": "http://www.lumiere-festival.com/content/uploads/2015/09/Asalto_Main-450x450.jpg",
@@ -620,6 +644,7 @@
         "type": "Feature",
         "properties": {
             "long-id": 1599,
+            "type": "artwork",
             "data-latitude": 54.776834,
             "data-longitude": -1.5787890000000289,
             "img-url": "http://www.lumiere-festival.com/content/uploads/2015/09/Ruby_Main-450x450.jpg",
@@ -644,6 +669,7 @@
         "type": "Feature",
         "properties": {
             "long-id": 1467,
+            "type": "artwork",
             "data-latitude": 54.776834,
             "data-longitude": -1.5787890000000289,
             "img-url": "http://www.lumiere-festival.com/content/uploads/2015/08/3662-8529-Tim-Smith_web-450x450.jpg",
@@ -667,6 +693,7 @@
         "type": "Feature",
         "properties": {
             "long-id": 1607,
+            "type": "artwork",
             "data-latitude": 54.7749006,
             "data-longitude": -1.569706999999994,
             "img-url": "http://www.lumiere-festival.com/content/uploads/2015/09/RHMain-450x450.jpg",
@@ -696,6 +723,7 @@
         "type": "Feature",
         "properties": {
             "long-id": 1525,
+            "type": "artwork",
             "data-latitude": 54.7748603,
             "data-longitude": -1.568500800000038,
             "img-url": "http://www.lumiere-festival.com/content/uploads/2015/09/LHMH-exhibition-SI-2_web2-450x450.jpg",
@@ -720,6 +748,7 @@
         "type": "Feature",
         "properties": {
             "long-id": 2176,
+            "type": "artwork",
             "data-latitude": 54.7861565,
             "data-longitude": -1.5659888000000137,
             "img-url": "http://www.lumiere-festival.com/content/uploads/2015/10/Little-Boasts.jpg",
