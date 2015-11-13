@@ -911,6 +911,125 @@
           ]
         ]
       }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "long-id": 102,
+            "type": "traffic-cam",
+            "img-url": "https://live.streamdays.com/bespoke-hosting/durhamcouncil/camera02.jpg",
+            "title": "Traffic camera",
+            "subtitle": "Millburngate Roundabout"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -1.579413414,
+                54.778130462
+            ]
+        }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "long-id": 103,
+        "type": "traffic-cam",
+        "img-url": "https://live.streamdays.com/bespoke-hosting/durhamcouncil/camera03.jpg",
+        "title": "Traffic camera",
+        "subtitle": "Gilesgate Roundabout"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.5634918212890625,
+          54.77836559784601
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "long-id": 104,
+        "type": "traffic-cam",
+        "img-url": "https://live.streamdays.com/bespoke-hosting/durhamcouncil/camera04.jpg",
+        "title": "Traffic camera",
+        "subtitle": "Leazes Bowl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.571817398071289,
+          54.77707852376237
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "long-id": 105,
+        "type": "traffic-cam",
+        "img-url": "https://live.streamdays.com/bespoke-hosting/durhamcouncil/camera05.jpg",
+        "title": "Traffic camera",
+        "subtitle": "New Elvet"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.571946144104004,
+          54.77512308284343
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "long-id": 106,
+        "type": "traffic-cam",
+        "img-url": "https://live.streamdays.com/bespoke-hosting/durhamcouncil/camera06.jpg",
+        "title": "Traffic camera",
+        "subtitle": "Durham Viaduct"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.5841770172119138,
+          54.77727653782538
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "long-id": 107,
+        "type": "traffic-cam",
+        "img-url": "https://live.streamdays.com/bespoke-hosting/durhamcouncil/camera07.jpg",
+        "title": "Traffic camera",
+        "subtitle": "Gilesgate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.5552520751953125,
+          54.77895961822625
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "long-id": 109,
+        "type": "traffic-cam",
+        "img-url": "https://live.streamdays.com/bespoke-hosting/durhamcouncil/camera09.jpg",
+        "title": "Traffic camera",
+        "subtitle": "Prince Bishops Car Park"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.5736198425292969,
+          54.77710327557325
+        ]
+      }
     }
 ]
 }
