@@ -6,6 +6,15 @@
     <link rel="stylesheet" type="text/css" href="lib/jquery-ui-lightness/jquery-ui-1.10.4.min.css" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RBM094ZZ2X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-RBM094ZZ2X');
+    </script>
 
 </head>
 <body>
