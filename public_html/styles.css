@@ -1,29 +1,21 @@
 
-.container-fluid, .container {
-	min-height:100%;
+
+.site-cards .card {
+    padding: 0 !important;
+    margin: 0 10px 40px 0 !important;
+    min-height: 350px;
 }
-	.map-half {
-		height: 90%;
-	}
-		#map {
-			width: 100%;
-			height: 100%;
-			background: #636363;
-		}
-
-
-	.art-half {
-		height: 30%;
-	}
-		.art-half img {
-			max-height: 100%;
-		}
-
-
-	.bottom-half {
-		width: 100%;
-	}
-
-.hide {
-	display: none;
+.site-cards .card .card-title, .site-cards .card .card-text {
+    padding: 0 10px;
 }
+.site-cards .card .btn {
+    padding: 0 auto;
+}
+
+.card-streetlights {
+    background: yellow;
+}
+.card-lumiere {
+    background: #b982bd;
+}
+
