@@ -15,18 +15,33 @@
         gtag('config', 'G-RBM094ZZ2X');
     </script>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Christmas Star</title>
 </head>
 <body>
 
     <div class="container">
-    <h1>Christmas Star</h1>
-        <p>Thank you for visiting my Christmas window display.</p>
 
-        <h3>We saw His star, that will cause great joy for all the people. <small>Matthew 2:2, Luke 2:10</small></h3>
+        <h1>We saw His star, that will cause great joy for all the people.</h1>
+        <h3 class="text-right">Matthew 2:2, Luke 2:10</h3>
 
-        <p>The lights are pre-programmed, but if you <a href="request-light.php" class="btn btn-success">request light</a> they may respond in a few seconds.</p>
+        <br>
+        <p>Thank you for visiting my Christmas window display. Lights will be on 4pm-10pm.
+            <br><a href="request-light.php" class="btn btn-success">press here to request a light change</a></p>
 
-        <p>One of the sheep keeps getting lost!</p>
+        <br>
+        <p>One of the sheep keeps getting lost, can you find it?</p>
+
+
+        <nav aria-label="Links to other pages">
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="/xmasstar">Return to window info</a></li>
+                <!--
+                <li class="page-item"><a class="page-link" href="#">Other Belmont windows</a></li>
+                <li class="page-item"><a class="page-link" href="#">Other Durham windows</a></li>
+                -->
+            </ul>
+        </nav>
     </div>
 
 

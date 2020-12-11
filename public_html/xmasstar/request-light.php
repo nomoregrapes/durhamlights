@@ -26,16 +26,17 @@ if(!$myfile) {
         gtag('config', 'G-RBM094ZZ2X');
     </script>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Christmas Star</title>
 </head>
 <body>
 
     <div class="container">
-    <h1>Light requested!...</h1>
+    <h1>Watch the window...</h1>
 
-        <p>Watch the window.</p>
         <?php
         if($request_result) {
-            echo '<p>If there is no change in 20 seconds, then we may have issues.</p>';
+            echo '<p>You may have to wait 10 seconds. Some changes are subtle.</p>';
         } else {
             echo '<p>There seems to be an issue, there may be too many requests tonight.';
         }
@@ -50,6 +51,7 @@ if(!$myfile) {
                 -->
             </ul>
         </nav>
+        <p>Behind the scenes pictures/video coming later...</p>
 
     </div>
 
