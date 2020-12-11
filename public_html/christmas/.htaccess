@@ -1,0 +1,15 @@
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    #RewriteRule ^.*$ area.php
+
+
+    RewriteRule error-([a-zA-Z0-9/-]*)/?$ index.php?error=$1 [L,NC]
+
+    RewriteCond %{SCRIPT_FILENAME} !-d
+    RewriteCond %{SCRIPT_FILENAME} !-f
+    RewriteCond %{REQUEST_URI} !(.*)\.php
+    #RewriteRule belmont$ area.php [L,NC]
+    RewriteRule ([a-zA-Z0-9\-]*)/?$ area.php?url=$1 [L,NC]
+    #RewriteRule christmas/belmont/$ area.php?url=$1 [L,NC]
+</IfModule>

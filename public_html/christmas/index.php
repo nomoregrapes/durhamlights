@@ -25,6 +25,12 @@
         <h1>Christmas Window Trails</h1>
         <p>Several areas in Durham have organised window displays for you to see. I've collected them here.</p>
 
+    <?php if(isset($_GET['error']) && $_GET['error'] == 'not-found') { ?>
+        <div class="alert alert-danger" role="alert">
+            Sorry, we could not find what you were looking for. Try one of the links below.
+        </div>
+    <?php } ?>
+
 <?php
 require_once('data.php');
 ?>
@@ -38,6 +44,7 @@ require_once('data.php');
                     <p class="card-text"><?= $detail['description']; ?></p>
                     <div class="row text-center">
                         <?php
+                            if(isset($detail['umap_url'])) { echo '<a href="'. $ref .'" class="mx-auto btn btn-primary">View map</a> '; }
                             if(isset($detail['pdf'])) { echo '<a href="files/'. $detail['pdf'] .'" class="mx-auto btn btn-primary">Download PDF</a>'; }
                             if(isset($detail['image'])) { echo '<a href="files/'. $detail['image'] .'" class="mx-auto btn btn-primary">View leaflet</a>'; }
                         ?>

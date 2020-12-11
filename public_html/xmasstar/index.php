@@ -35,11 +35,8 @@
 
         <nav aria-label="Links to other pages">
             <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="/xmasstar">Return to window info</a></li>
-                <!--
-                <li class="page-item"><a class="page-link" href="#">Other Belmont windows</a></li>
-                <li class="page-item"><a class="page-link" href="#">Other Durham windows</a></li>
-                -->
+                <li class="page-item"><a class="page-link" href="/christmas/belmont">Other Belmont windows</a></li>
+                <li class="page-item"><a class="page-link" href="/christmas">Other Durham windows</a></li>
             </ul>
         </nav>
     </div>
