@@ -23,6 +23,18 @@
     <h1>Durham Lights</h1>
 
     <div class="row site-cards">
+        <div class="card rounded col-sm-6 card-christmas" style="width:268px;">
+            <a class="card-img-top" href="christmas"><img src="images/card-christmas.png"></a>
+            <div class="card-body">
+                <h5 class="card-title">Christmas windows</h5>
+                <p class="card-text">Decorated windows for advent and Christmas, and where to find them.</p>
+                <div class="row text-center">
+                    <a href="christmas" class="mx-auto btn btn-primary">View areas</a>
+                </div>
+            </div>
+        </div>
+
+    <div class="row site-cards">
         <div class="card rounded col-sm-6 card-streetlights" style="width:268px;">
             <a class="card-img-top" href="https://www.durhamcp.org.uk/streetlights"><img src="images/card-streetlights.png" alt="Card image cap"></a>
             <div class="card-body">

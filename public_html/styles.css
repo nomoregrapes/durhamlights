@@ -12,6 +12,10 @@
     padding: 0 auto;
 }
 
+.card-christmas {
+    background: #29261c;
+    color: #fc9095
+}
 .card-streetlights {
     background: yellow;
 }

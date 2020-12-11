@@ -1,0 +1,23 @@
+
+
+.site-cards .card {
+    padding: 0 !important;
+    margin: 0 10px 40px 0;
+    min-height: 200px;
+}
+
+.site-cards .card .card-title, .site-cards .card .card-text {
+    padding: 0 10px;
+}
+.site-cards .card .btn {
+    padding: 0 auto;
+}
+
+.card-belmont {
+    background: #333aca;
+    color: #acc3d2
+}
+.card-northend {
+    background: #e0cfb1;
+}
+
