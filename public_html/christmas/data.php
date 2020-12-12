@@ -29,7 +29,7 @@ $areas = array(
     'gracechurch' => array(
         'name' => "Newton Hall etc.",
         'long-heading' => "Light in the darkness, by Grace Church.",
-        'description'   => "Newton Hall, Frawellgate Moor, and Neville's Cross. Arranged by Grace Church",
+        'description'   => "Newton Hall, Frawellgate Moor, and Neville's Cross. Part of 'Light in the Darkness' by Grace Church",
         'image'   => 'grace-church-map.jpg',
     ),
 );
