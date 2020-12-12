@@ -5,6 +5,9 @@
     margin: 0 10px 40px 0;
     min-height: 200px;
 }
+.site-cards .card .card-body {
+    min-height: 150px;
+}
 
 .site-cards .card .card-title, .site-cards .card .card-text {
     padding: 0 10px;
@@ -19,5 +22,9 @@
 }
 .card-northend {
     background: #e0cfb1;
+}
+.card-gracechurch {
+    background: #f5f3b0;
+    color: #040004;
 }
 

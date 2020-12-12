@@ -14,4 +14,10 @@ $areas = array(
         'description'   => "Lit up 4-10pm each day, all on display from 25th Dec till 1st Jan.",
         'image'   => 'northend-leaflet.jpg',
     ),
+    'gracechurch' => array(
+        'name' => "Newton Hall etc.",
+        'long-heading' => "Light in the darkness, by Grace Church.",
+        'description'   => "Newton Hall, Frawellgate Moor, and Neville's Cross. Arranged by Grace Church",
+        'image'   => 'grace-church-map.jpg',
+    ),
 );
