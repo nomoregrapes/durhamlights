@@ -48,7 +48,7 @@
 
     <?php if(isset($area['umap_url'])) { ?>
     <div class="row">
-        <iframe width="100%" height="500px" frameborder="0" allowfullscreen src="<?= $area['umap_url']; ?>?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false"></iframe>
+        <iframe width="100%" height="500px" frameborder="0" allowfullscreen src="<?= $area['umap_url']; ?>?scaleControl=true&miniMap=false&scrollWheelZoom=true&zoomControl=true&allowEdit=false&moreControl=false&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=false&onLoadPanel=undefined&captionBar=false"></iframe>
     </div>
     <?php } else { ?>
         <p>An interactive map is not available yet.</p>
