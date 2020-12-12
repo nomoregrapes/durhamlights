@@ -1,6 +1,12 @@
 <?php
 
 $areas = array(
+    'overview' => array(
+        'name' => "Durham Overview",
+        'long-heading' => "Christmas Window Trails in Durham",
+        'description'   => "An overview map of Durham areas with window trails, but not all the markers.",
+        'umap_url' => "//umap.openstreetmap.fr/en/map/durham-christmas-windows-2020_536871",
+    ),
     'belmont' => array(
         'name' => "Belmont",
         'long-heading' => "Belmont Christmas Window Trail",
