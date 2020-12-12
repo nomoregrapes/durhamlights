@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="../lib/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../lib/bootstrap/bootstrap-theme.min.css" />
     <link rel="stylesheet" type="text/css" href="../lib/jquery-ui-lightness/jquery-ui-1.10.4.min.css" />
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css?t=2" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RBM094ZZ2X"></script>
     <script>
