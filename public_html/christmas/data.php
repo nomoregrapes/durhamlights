@@ -19,12 +19,14 @@ $areas = array(
         'long-heading' => "Sherburn Road Christmas Trail",
         'description'   => "Lit up houses with a letter on each poster, arranged by Kings Church.",
         'image'   => 'kcd-sherburn-road-leaflet.jpg',
+        'umap_url' => "//umap.openstreetmap.fr/en/map/sherburn-road-christmas-trail_536911",
     ),
     'gilesgate' => array(
         'name' => "Gilesgate",
         'long-heading' => "Gilesgate Christmas Trail",
         'description'   => "Lit up houses with a letter on each poster, arranged by Kings Church.",
         'image'   => 'kcd-gilesgate-leaflet.jpg',
+        'umap_url' => "http://umap.openstreetmap.fr/en/map/gilesgate-christmas-trail_536914",
     ),
     'northend' => array(
         'name' => "North End Advent Windows",
