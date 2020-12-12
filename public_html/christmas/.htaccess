@@ -9,6 +9,8 @@
     RewriteCond %{SCRIPT_FILENAME} !-d
     RewriteCond %{SCRIPT_FILENAME} !-f
     RewriteCond %{REQUEST_URI} !(.*)\.php
+    RewriteCond %{REQUEST_URI} !files/(.*)
+    RewriteCond %{REQUEST_URI} !images/(.*)
     #RewriteRule belmont$ area.php [L,NC]
     RewriteRule ([a-zA-Z0-9\-]*)/?$ area.php?url=$1 [L,NC]
     #RewriteRule christmas/belmont/$ area.php?url=$1 [L,NC]
