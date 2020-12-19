@@ -13,6 +13,8 @@
     <link rel="stylesheet" type="text/css" href="../../lib/bootstrap/bootstrap-theme.min.css" />
     <link rel="stylesheet" type="text/css" href="../../lib/jquery-ui-lightness/jquery-ui-1.10.4.min.css" />
     <link rel="stylesheet" type="text/css" href="../styles.css" />
+
+    <?php if($_SERVER['HTTP_HOST'] != 'dev.durhamlights.com') { ?>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RBM094ZZ2X"></script>
     <script>
@@ -22,6 +24,7 @@
 
         gtag('config', 'G-RBM094ZZ2X');
     </script>
+    <?php } ?>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><?= (isset($area['long-heading']) ? $area['long-heading'] : "Local Christmas Windows"); ?></title>
