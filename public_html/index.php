@@ -16,6 +16,8 @@
         gtag('config', 'G-RBM094ZZ2X');
     </script>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Durham Lights</title>
 </head>
 <body>
 
