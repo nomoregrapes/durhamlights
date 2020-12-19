@@ -35,6 +35,13 @@ $areas = array(
         'image'   => 'northend-leaflet.jpg',
         'umap_url' => "http://umap.openstreetmap.fr/en/map/north-end-advent-windows_540139",
     ),
+    'shincliffe' => array(
+        'name' => "Shincliffe Village Advent Windows",
+        'long-heading' => "Shincliffe Village Advent Windows",
+        'description'   => "Organised by St Mary's Church.",
+        'image'   => 'shincliffe-leaflet.png',
+        'umap_url' => "http://umap.openstreetmap.fr/en/map/shincliffe-advent-windows_540214",
+    ),
     'gracechurch' => array(
         'name' => "Newton Hall etc.",
         'long-heading' => "Light in the darkness, by Grace Church.",
