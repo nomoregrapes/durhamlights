@@ -33,6 +33,7 @@ $areas = array(
         'long-heading' => "North End Advent Windows",
         'description'   => "Lit up 4-10pm each day, all on display from 25th Dec till 1st Jan.",
         'image'   => 'northend-leaflet.jpg',
+        'umap_url' => "http://umap.openstreetmap.fr/en/map/north-end-advent-windows_540139",
     ),
     'gracechurch' => array(
         'name' => "Newton Hall etc.",
