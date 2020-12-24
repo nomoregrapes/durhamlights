@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="../lib/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../lib/bootstrap/bootstrap-theme.min.css" />
     <link rel="stylesheet" type="text/css" href="../lib/jquery-ui-lightness/jquery-ui-1.10.4.min.css" />
-    <link rel="stylesheet" type="text/css" href="styles.css?t=4" />
+    <link rel="stylesheet" type="text/css" href="styles.css?t=5" />
 
     <?php if($_SERVER['HTTP_HOST'] != 'dev.durhamlights.com') { ?>
     <!-- Global site tag (gtag.js) - Google Analytics -->
