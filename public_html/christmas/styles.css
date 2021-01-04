@@ -16,12 +16,50 @@
     padding: 0 auto;
 }
 
+
+.site-cards .card .status-banner {
+    position: absolute;
+    margin: 0;
+    padding: 1em 80px;
+    top: -40px;
+    right: -40px;
+    transform: translateX(30%) translateY(0%) rotate(45deg);
+    transform-origin: top left;
+    background: purple;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+    .site-cards .card {
+        overflow: hidden;
+        position: relative;
+    }
+    .site-cards .card.status-old, .site-cards .card.status-old :not(.status-banner) {
+        filter: grayscale(30%);
+    }
+    .site-cards .card.status-old .status-banner {
+        background: #ddd;
+        color: #555;
+        z-index: 100;
+    }
+
+    .row-status-banner.status-old {
+        padding: 10px 20px;
+        background: #ddd;
+        color: #555;
+        font-size: 1em;
+    }
+        .row-status-banner.status-old strong {
+            font-size: 1.5em;
+        }
+
+
 .card-overview {
     border: 4px solid #666;
 }
     .site-cards .card-overview .card-body {
         min-height: 142px;
     }
+
 .card-belmont {
     background: #333aca;
     color: #acc3d2

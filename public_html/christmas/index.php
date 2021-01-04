@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="../lib/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../lib/bootstrap/bootstrap-theme.min.css" />
     <link rel="stylesheet" type="text/css" href="../lib/jquery-ui-lightness/jquery-ui-1.10.4.min.css" />
-    <link rel="stylesheet" type="text/css" href="styles.css?t=5" />
+    <link rel="stylesheet" type="text/css" href="styles.css?t=6" />
 
     <?php if($_SERVER['HTTP_HOST'] != 'dev.durhamlights.com') { ?>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -40,7 +40,10 @@ require_once('data.php');
 
         <div class="row site-cards">
             <?php foreach($areas as $ref => $detail) {?>
-            <div class="card rounded col-sm-3 card-<?= $ref; ?> text-center" >
+            <div class="card rounded col-sm-3 card-<?= $ref; ?> status-<?= $detail['status']; ?> year-<?= $detail['year']; ?> text-center" >
+                <?php if($detail['status'] == 'old'): ?>
+                    <span class="status-banner"><?= $detail['year']; ?> Details</span>
+                <?php endif; ?>
                 <a class="card-img-top" href="<?= $ref; ?>"><img src="images/card-<?= $ref; ?>.png" class="rounded"></a>
                 <div class="card-body">
                     <h3 class="card-title"><?= $detail['name']; ?></h3>

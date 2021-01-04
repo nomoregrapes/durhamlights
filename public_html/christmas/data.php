@@ -3,12 +3,14 @@
 $areas = array(
     'overview' => array(
         'name' => "Durham Overview",
+        'status'=>'old', 'year'=>'2020',
         'long-heading' => "Christmas Window Trails in Durham",
         'description'   => "An overview map of Durham areas with window trails, but not all the markers.",
         'umap_url' => "//umap.openstreetmap.fr/en/map/durham-christmas-windows-2020_536871",
     ),
     'belmont' => array(
         'name' => "Belmont",
+        'status'=>'old', 'year'=>'2020',
         'long-heading' => "Belmont Christmas Window Trail",
         'description'   => "Arranged by St Mary Magdalene Church and members of Carrville Methodist Church.",
         'pdf'   => 'belmont-leaflet.pdf',
@@ -16,6 +18,7 @@ $areas = array(
     ),
     'northend' => array(
         'name' => "North End Advent Windows",
+        'status'=>'old', 'year'=>'2020',
         'long-heading' => "North End Advent Windows",
         'description'   => "Lit up 4-10pm each day, all on display from 25th Dec till 1st Jan.",
         'image'   => 'northend-leaflet.jpg',
@@ -23,6 +26,7 @@ $areas = array(
     ),
     'gilesgate' => array(
         'name' => "Gilesgate",
+        'status'=>'old', 'year'=>'2020',
         'long-heading' => "Gilesgate Christmas Trail",
         'description'   => "Lit up houses with a letter on each poster, arranged by Kings Church.",
         'image'   => 'kcd-gilesgate-leaflet.jpg',
@@ -30,6 +34,7 @@ $areas = array(
     ),
     'shincliffe' => array(
         'name' => "Shincliffe Village Advent Windows",
+        'status'=>'old', 'year'=>'2020',
         'long-heading' => "Shincliffe Village Advent Windows",
         'description'   => "Organised by St Mary's Church.",
         'image'   => 'shincliffe-leaflet.png',
@@ -37,6 +42,7 @@ $areas = array(
     ),
     'sherburn-road' => array(
         'name' => "Sherburn Road",
+        'status'=>'old', 'year'=>'2020',
         'long-heading' => "Sherburn Road Christmas Trail",
         'description'   => "Lit up houses with a letter on each poster, arranged by Kings Church.",
         'image'   => 'kcd-sherburn-road-leaflet.jpg',
@@ -44,12 +50,14 @@ $areas = array(
     ),
     'gracechurch' => array(
         'name' => "Newton Hall etc.",
+        'status'=>'old', 'year'=>'2020',
         'long-heading' => "Light in the darkness, by Grace Church.",
         'description'   => "Newton Hall, Framwellgate Moor, and Neville's Cross. Part of 'Light in the Darkness' by Grace Church",
         'image'   => 'grace-church-map.jpg',
     ),
     'elvet' => array(
         'name' => "Elvet Advent Windows",
+        'status'=>'old', 'year'=>'2020',
         'long-heading' => "Elvet Residents' Association Advent Window Trail",
         'description'   => "Organised by Elvet Residents' Association. On each day of Advent, a window display will be lit up after dark.",
         'pdf'   => 'elvet-leaflet.pdf',

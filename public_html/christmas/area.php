@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="../../lib/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../../lib/bootstrap/bootstrap-theme.min.css" />
     <link rel="stylesheet" type="text/css" href="../../lib/jquery-ui-lightness/jquery-ui-1.10.4.min.css" />
-    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
 
     <?php if($_SERVER['HTTP_HOST'] != 'dev.durhamlights.com') { ?>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -48,6 +48,16 @@
         </ul>
     </nav>
 
+    <?php if($area['status']  =='old') { ?>
+        <div class="row row-status-banner status-old">
+            <div class="col-8">
+                <strong>Old details: </strong>
+                The information shown on this page is for
+                <?php if(isset($area['year'])) {echo $area['year'];} else {echo "an old year";} ?>.
+                There may not be an organised window trail this year, or it may include different locations.
+            </div>
+        </div>
+    <?php } ?>
 
     <?php if(isset($area['umap_url'])) { ?>
     <div class="row">
