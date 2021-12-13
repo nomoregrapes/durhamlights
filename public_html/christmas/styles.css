@@ -34,7 +34,7 @@
         position: relative;
     }
     .site-cards .card.status-old, .site-cards .card.status-old :not(.status-banner) {
-        filter: grayscale(30%);
+        filter: grayscale(60%);
     }
     .site-cards .card.status-old .status-banner {
         background: #ddd;
